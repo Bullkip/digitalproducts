@@ -6,6 +6,14 @@ $(document).ready(function () {
         mobilefirst: true,
         responsive: [
             {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
                 breakpoint: 480,
                 settings: {
                     arrows: false,
@@ -22,7 +30,7 @@ $(document).ready(function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 2000,
         mobilefirst: true,
         responsive: [{
                 breakpoint: 1024,
@@ -33,12 +41,6 @@ $(document).ready(function () {
                 }
             }, {
                 breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }, {
-                breakpoint: 480,
                 settings: {
                     arrows: false,
                     slidesToShow: 1,
@@ -65,18 +67,17 @@ $(document).ready(function () {
         $(".contact-bar__item-icon--address").toggleClass("hvr-pulse");
     });
 
-     $(".contact-bar__item:last").hover(function () {
+    $(".contact-bar__item:last").hover(function () {
          $(".contact-bar__item-icon--phone").toggleClass("hvr-buzz");
      });
 
-    //    $(".contact-bar__item").hover(function () {
-    //      if ($(this) == $(".contact-bar__item:first")) {
-    //           $(".contact-bar__item-icon--address").toggleClass("hvr-pulse");
-    //      } else {
-    //          $(".contact-bar__item-icon--phone").toggleClass("hvr-buzz");
-    //      }
-    //    });
-
+    $('.header-nav__icon').click(function () {
+           $(this).toggleClass('header-nav__icon-open'),
+           $('.header-nav__items--small').toggleClass('header-nav__items--open');
+       });
+     $(".contact-form--item").click(function () {
+         $(this).closest('contact-form__label').toggleClass('ontact-form__label-indent');
+     });
 });
 
 function initMap() {
