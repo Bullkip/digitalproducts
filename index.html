@@ -22,11 +22,10 @@
 				<a href="#" class="header-nav__logo"><i class="icon icon-logo"></i></a>
 				<ul class="header-nav__items">
 					<li class="header-nav__item"><a href="#" class="header-nav__link">Home</a></li>
-					<li class="header-nav__item"><a href="#" class="header-nav__link">About</a></li>
-					<li class="header-nav__item"><a href="#" class="header-nav__link">Services</a></li>
-					<li class="header-nav__item"><a href="#" class="header-nav__link">Works</a></li>
-					<li class="header-nav__item"><a href="#" class="header-nav__link">Contact</a></li>
-					<li class="header-nav__item"><a href="#" class="header-nav__link"></a></li>
+					<li class="header-nav__item"><a href="#about" class="header-nav__link">About</a></li>
+					<li class="header-nav__item"><a href="#services" class="header-nav__link">Services</a></li>
+					<li class="header-nav__item"><a href="#works" class="header-nav__link">Works</a></li>
+					<li class="header-nav__item"><a href="#contact" class="header-nav__link">Contact</a></li>
 				</ul>
 			</div>
 		</div>
@@ -39,7 +38,7 @@
 					nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 			</div>
 		</section>
-		<section class="about">
+		<section class="about" id="about">
 			<div class="container about__wrapper">
 				<div class="about-card"
 					style="background-image: linear-gradient(rgba(159, 154, 207, .5),rgba(159, 154, 207, .5)), url(./img/about.jpg); background-repeat: no-repeat;">
@@ -61,33 +60,79 @@
 							posuere consectetur est at
 							lobortis.</p>
 					</div>
-					<a href="#" class="btn hvr-bob about-description__btn hvr-grow-shadow">Learn More</a>
+					<a href="#" class="btn hvr-bob about-description__btn  hvr-grow-shadow">Learn More</a>
 				</div>
 			</div>
 		</section>
-		<section class="services">
+		<section class="services" id="services">
 			<div class="container">
 				<div class="services__grid">
-					<a class="services__grid-item services__grid-item--1 services__grid-item--coloured">
+					<!-- <a class="services__grid-item services__grid-item--1 services__grid-item--coloured">
 						<i class="icon icon-Graphic"></i>
 						<h3 class="services__title">Graphic Design</h3>
 						<p class="services__text">Cras mattis consectetur<br> purus sit amet fermentum.</p>
-					</a>
-					<a class="services__grid-item services__grid-item--3">
+					</a> -->
+					<div class="services__grid-wrap ">
+						<a class="services__grid-item services__grid-item--coloured services__grid-item--1 services__grid-item--face">
+							<i class="icon icon-Graphic"></i>
+							<h3 class="services__title">Graphic Design</h3>
+							<p class="services__text">Cras mattis consectetur<br> purus sit amet fermentum.</p>
+						</a>
+						<a class="services__grid-item services__grid-item--coloured services__grid-item--1 services__grid-item--back">
+							<i class="icon icon-Graphic"></i>
+						</a>
+					</div>
+					<!-- <a class="services__grid-item services__grid-item--3">
 						<i class="icon icon-Web"></i>
 						<h3 class="services__title">Web Development</h3>
 						<p class="services__text">Cras mattis consectetur<br> purus sit amet fermentum.</p>
-					</a>
-					<a class="services__grid-item services__grid-item--2">
+					</a> -->
+					<div class="services__grid-wrap">
+						<a class="services__grid-item services__grid-item--3 services__grid-item--face">
+							<i class="icon icon-Web"></i>
+							<h3 class="services__title">Web Development</h3>
+							<p class="services__text">Cras mattis consectetur<br> purus sit amet fermentum.</p>
+						</a>
+						<a class="services__grid-item services__grid-item--3 services__grid-item--back">
+							<i class="icon icon-Web"></i>
+							<h3 class="services__title">Web Development</h3>
+							<p class="services__text">Cras mattis consectetur<br> purus sit amet fermentum.</p>
+						</a>
+					</div>
+					<!-- <a class="services__grid-item services__grid-item--2">
 						<i class="icon icon-SEO"></i>
 						<h3 class="services__title">Seo & Marketing</h3>
 						<p class="services__text">Cras mattis consectetur<br> purus sit amet fermentum.</p>
-					</a>
-					<a class="services__grid-item services__grid-item--4 services__grid-item--coloured">
+					</a> -->
+					<div class="services__grid-wrap">
+						<a class="services__grid-item services__grid-item--2 services__grid-item--face">
+							<i class="icon icon-SEO"></i>
+							<h3 class="services__title">Seo & Marketing</h3>
+							<p class="services__text">Cras mattis consectetur<br> purus sit amet fermentum.</p>
+						</a>
+						<a class="services__grid-item services__grid-item--2 services__grid-item--back">
+							<i class="icon icon-SEO"></i>
+							<h3 class="services__title">Seo & Marketing</h3>
+							<p class="services__text">Cras mattis consectetur<br> purus sit amet fermentum.</p>
+						</a>
+					</div>
+					<!-- <a class="services__grid-item services__grid-item--4 services__grid-item--coloured">
 						<i class="icon icon-Mobile"></i>
 						<h3 class="services__title">Mobile Development</h3>
 						<p class="services__text">Cras mattis consectetur<br> purus sit amet fermentum.</p>
-					</a>
+					</a> -->
+					<div class="services__grid-wrap">
+						<a class="services__grid-item services__grid-item--4 services__grid-item--coloured services__grid-item--face">
+							<i class="icon icon-Mobile"></i>
+							<h3 class="services__title">Mobile Development</h3>
+							<p class="services__text">Cras mattis consectetur<br> purus sit amet fermentum.</p>
+						</a>
+						<a class="services__grid-item services__grid-item--4 services__grid-item--coloured services__grid-item--back">
+							<i class="icon icon-Mobile"></i>
+							<h3 class="services__title">Mobile Development</h3>
+							<p class="services__text">Cras mattis consectetur<br> purus sit amet fermentum.</p>
+						</a>
+					</div>
 					<a class="services__grid-item  services__grid-item--5 services__grid-item--lg"
 						style="background-image: linear-gradient(rgba(159, 154, 207, .5),rgba(159, 154, 207, .5)), url(./img/about-us-bg.jpg); background-repeat: no-repeat;">
 						<i class="icon icon-Services"></i>
@@ -99,7 +144,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="works">
+		<section class="works" id="works">
 			<div class="container">
 				<i class="icon icon-Works"></i>
 				<h2 class="works__title">RECENT WORKS</h2>
@@ -137,7 +182,7 @@
 hvr-grow-shadow">View Gallery</a>
 			</div>
 		</section>
-		<section class="our-team">
+		<section class="our-team" id="team">
 			<div class="container">
 				<i class="icon icon-Team"></i>
 				<h2 class="our-team__title">MEET OUR TEAM</h2>
@@ -291,7 +336,7 @@ hvr-grow-shadow">View Gallery</a>
 				</div>
 			</div>
 		</section>
-		<section class="contact">
+		<section class="contact" id="contact">
 			<div class="contact__title-wrap">
 				<i class="icon icon-form"></i>
 				<h2 class="contact__title">Get in Touch</h2>
@@ -328,11 +373,25 @@ hvr-grow-shadow">Send Message</button>
 				</div>
 		</section>
 	</main>
-	<footer>
+	<footer class="footer-nav">
 		<div class="container">
-			<div class="footer-nav">
-				<div class="footer-nav__caption"></div>
-				<div class="footer-nav__socials"></div>
+			<div class="footer-nav__wrap">
+				<div class="footer-nav__caption">©2014 <b>tulus</b>driyo. All Rights Reserved.</div>
+				<div class="footer-nav__socials">
+					<a href="#" class="footer-nav__socials-link  hvr-grow-shadow">
+						<i class="fab fa-behance"></i></a>
+					<a href="#" class="footer-nav__socials-link  hvr-grow-shadow">
+						<i class="fab fa-linkedin-in"></i></a>
+					<a href="#" class="footer-nav__socials-link  hvr-grow-shadow">
+						<i class="fab fa-google-plus-g"></i>
+					</a>
+					<a href="#" class="footer-nav__socials-link  hvr-grow-shadow">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+					<a href="#" class="footer-nav__socials-link  hvr-grow-shadow">
+						<i class="fab fa-twitter"></i>
+					</a>
+				</div>
 			</div>
 		</div>
 	</footer>

@@ -74,7 +74,6 @@ header {
 	}
 
 	&__items {
-		flex-basis: 55%;
 		min-width: 50%;
 		padding: 0;
 		margin: 0;
@@ -97,7 +96,7 @@ header {
 }
 
 .nav-scroll{
-	background-color: rgba(159, 154, 207, .7);
+	background-color: rgba(159, 154, 207, .5);
 	 padding: 15px 30px 15px;
 }
 .icon {
@@ -351,20 +350,26 @@ header {
 		grid-template-rows: 1fr 1fr;
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
+			&-wrap {
+				transition: transform 1s;
+				transform-style: preserve-3d;
+				cursor: pointer;
+				position: relative;
+				&:hover {
+					transform: rotateY(180deg);
+				}
+			}
 	}
 
 	&__grid-item {
-		padding: 100px 65px 140px;
-		text-align: center;
-		transform: rotateY(0deg);
-		@include tr(all, .4s);
-
-		&:hover {
-			transform: rotateY(180deg);
-			@include tr(all, .4s);
-		}
+		// padding: 100px 65px 100px;
+		// text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 400px;
 		
-
 		&--1 {
 			grid-area: 1 / 1 / 2 / 2;
 			
@@ -387,8 +392,9 @@ header {
 		}
 
 		&--lg {
+			justify-content: flex-start;
 			background-color: #9f9acf;
-			padding: 115px 20px 0;
+			padding: 100px 20px 0;
 			color: #fff;
 			background-size: cover;
 
@@ -416,6 +422,21 @@ header {
 
 		&--coloured {
 			background-color: #dbdbdb;
+		}
+
+		&--face{
+			width: 100%;
+			position: absolute;
+			backface-visibility: hidden;
+		}
+		&--back{
+			width: 100%;
+			height: auto;
+			position: absolute;
+			vertical-align: middle;
+			transform: rotateY(180deg);
+			backface-visibility: hidden;
+
 		}
 	}
 
@@ -525,8 +546,8 @@ header {
 .slick-arrow {
 	display: inline-block;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	top:50%;
+	
 	z-index: 1;
 	width: 4rem;
 	height: 4rem;
@@ -541,11 +562,11 @@ header {
 
 
 	&.slick-prev {
-		left: -6%;
+		left: -5%;
 	}
 
 	&.slick-next {
-		right: -6%;
+		right: -5%;
 		transform: rotate(-180deg);
 
 	}
@@ -853,9 +874,6 @@ header {
 	}
 }
 
-
-
-
 .hvr-pulse {
 	display: inline-block;
 	vertical-align: middle;
@@ -879,3 +897,38 @@ header {
 	}
 }
 
+.footer-nav{
+	padding: 75px 0 80px;
+	background-color: #9f9acf;
+	color: #fff;
+	&__wrap{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	&__caption{
+		
+	}
+	&__socials{
+		min-width: 25%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	&__socials-link{
+		text-decoration: none;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background-color: #fff;
+		color: #9f9acf;
+		text-align: center;
+		@include tr(all,.3s);
+		&:hover,
+		&:focus,
+		&:active{
+			transform: scale(1.2);
+			
+		}
+	}
+}

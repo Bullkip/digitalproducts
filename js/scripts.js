@@ -69,10 +69,6 @@ $(document).ready(function () {
          $(".contact-bar__item-icon--phone").toggleClass("hvr-buzz");
      });
 
-       $(".contact-form--item").click(function () {
-           $("label + contact-form--item ").toggleClass("hvr-buzz");
-       });
-
     //    $(".contact-bar__item").hover(function () {
     //      if ($(this) == $(".contact-bar__item:first")) {
     //           $(".contact-bar__item-icon--address").toggleClass("hvr-pulse");
@@ -110,4 +106,7 @@ function initMap() {
     });
 };
 
+(function () {
+    
+})();
 
