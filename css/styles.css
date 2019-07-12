@@ -1466,6 +1466,8 @@ header {
     right: 2%; } }
 
 @media screen and (max-width: 991.98px) {
+  .main {
+    background-size: auto; }
   .header-nav__items {
     display: none; }
   .header-nav__icon {
