@@ -27,7 +27,9 @@
 @import 'normalize';
 @import 'mixins';
 @import 'slick';
-// @import 'media';
+
+$main-color: #9f9acf;
+$sub-color: #fff;
 
 * {
 	box-sizing: border-box;
@@ -125,7 +127,7 @@ header {
 		margin: 0 15px 0 0;
 		text-transform: uppercase;
 		text-decoration: none;
-		color: #fff;
+		color: $sub-color;
 		font-family: 'Proxima Nova', sans-serif;
 		font-weight: 500;
 		font-size: 2.4rem;
@@ -143,7 +145,7 @@ header {
 			position: absolute;
 			height: 3px;
 			width: 100%;
-			background: #fff;
+			background: $sub-color;
 			border-radius: 9px;
 			opacity: 1;
 			left: 0;
@@ -188,8 +190,6 @@ header {
 		}
 	}
 }
-
-
 
 .nav-scroll {
 	background-color: rgba(159, 154, 207, .5);
@@ -286,7 +286,7 @@ header {
 	justify-content: center;
 	text-align: center;
 
-	color: #fff;
+	color: $sub-color;
 
 	&__title {
 		font-family: 'Proxima Nova', sans-serif;
@@ -325,11 +325,17 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	&__title {
-		color: #fff;
-		font-family: 'Proxima Nova', sans-serif;
-		font-weight: 600;
-		font-size: 3.6rem;
+
+}
+
+.title-h2{
+	color: $sub-color;
+	font-family: 'Proxima Nova',
+	sans-serif;
+	font-weight: 600;
+	font-size: 3.6rem;
+	&--black{
+		color: inherit;
 	}
 }
 
@@ -355,19 +361,12 @@ header {
 	&:hover,
 	&:focus,
 	&:active {
-		-webkit-animation-name: hvr-bob-float, hvr-bob;
 		animation-name: hvr-bob-float, hvr-bob;
-		-webkit-animation-duration: .3s, 1.5s;
 		animation-duration: .3s, 1.5s;
-		-webkit-animation-delay: 0s, .3s;
 		animation-delay: 0s, .3s;
-		-webkit-animation-timing-function: ease-out, ease-in-out;
 		animation-timing-function: ease-out, ease-in-out;
-		-webkit-animation-iteration-count: 1, infinite;
 		animation-iteration-count: 1, infinite;
-		-webkit-animation-fill-mode: forwards;
 		animation-fill-mode: forwards;
-		-webkit-animation-direction: normal, alternate;
 		animation-direction: normal, alternate;
 
 	}
@@ -400,12 +399,9 @@ header {
 .hvr-grow-shadow {
 	display: inline-block;
 	vertical-align: middle;
-	-webkit-transform: perspective(1px) translateZ(0);
 	transform: perspective(1px) translateZ(0);
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-	-webkit-transition-duration: 0.3s;
 	transition-duration: 0.3s;
-	-webkit-transition-property: box-shadow, transform;
 	transition-property: box-shadow, transform;
 
 	&:hover,
@@ -459,7 +455,7 @@ header {
 		cursor: pointer;
 		position: relative;
 
-		&:hover {
+		&:hover:not(:nth-child(5)) {
 			transform: rotateY(180deg);
 			transition: transform 1.5s;
 		}
@@ -472,6 +468,8 @@ header {
 			justify-content: center;
 			text-align: center;
 		}
+
+
 
 		&--1 {
 			grid-area: 1 / 1 / 2 / 2;
@@ -498,7 +496,7 @@ header {
 			justify-content: flex-start;
 			background-color: #9f9acf;
 			padding: 100px 20px 0;
-			color: #fff;
+			color: $sub-color;
 			background-size: cover;
 
 			& blockquote {
@@ -552,11 +550,7 @@ header {
 	&__title {
 		margin: 30px 0 15px;
 		text-transform: uppercase;
-
-		&--h2 {
-			font-family: 'Proxima Nova', sans-serif;
-			font-weight: 600;
-			font-size: 3.6rem;
+		&--lg{
 			margin-bottom: 120px;
 			line-height: 1.2;
 		}
@@ -591,7 +585,7 @@ header {
 			margin: 0 5px 0 0;
 			width: 10px;
 			height: 10px;
-			border: 1px solid #fff;
+			border: 1px solid $sub-color;
 			border-radius: 50%;
 			background-color: transparent;
 			cursor: pointer;
@@ -600,7 +594,7 @@ header {
 			&:hover,
 			&:active,
 			&.slick-active {
-				background-color: #fff;
+				background-color: $sub-color;
 
 			}
 
@@ -609,13 +603,6 @@ header {
 
 			}
 		}
-	}
-
-	&__title {
-		color: #fff;
-		font-family: 'Proxima Nova', sans-serif;
-		font-weight: 600;
-		font-size: 3.6rem;
 	}
 
 	&__wrap-container {
@@ -635,13 +622,12 @@ header {
 	}
 
 	&__img {
-		// width: 100%;
 		height: auto;
 	}
 
 	&__btn {
-		color: #fff;
-		border-color: #fff;
+		color: $sub-color;
+		border-color: $sub-color;
 		margin-top: 100px;
 	}
 }
@@ -714,7 +700,7 @@ header {
 	}
 
 	&__person {
-		background-color: #fff;
+		background-color: $sub-color;
 		padding-top: 180px;
 		display: flex;
 		flex-direction: column;
@@ -766,7 +752,7 @@ header {
 		height: 32px;
 		border-radius: 50%;
 		border: 1px solid transparent;
-		background-color: #fff;
+		background-color: $sub-color;
 		color: #9f9acf;
 		text-align: center;
 	}
@@ -793,11 +779,7 @@ header {
 	}
 
 	&__title {
-		color: #fff;
-		font-family: 'Proxima Nova',
-			sans-serif;
-		font-weight: 600;
-		font-size: 3.6rem;
+	
 		margin: 0;
 	}
 
@@ -862,10 +844,7 @@ header {
 			}
 
 		}
-		&__label-indent{
-			// // text-indent: 100px;
-			// transform: translate(50%,50%);
-		} 
+	
 
 		&__name {
 			width: 45%;
@@ -1034,7 +1013,7 @@ header {
 .footer-nav {
 	padding: 75px 0 80px;
 	background-color: #9f9acf;
-	color: #fff;
+	color: $sub-color;
 
 	&__wrap {
 		display: flex;
@@ -1056,7 +1035,7 @@ header {
 		width: 32px;
 		height: 32px;
 		border-radius: 50%;
-		background-color: #fff;
+		background-color: $sub-color;
 		color: #9f9acf;
 		text-align: center;
 		@include tr(all, .3s);
