@@ -75,9 +75,8 @@ $(document).ready(function () {
            $(this).toggleClass('header-nav__icon-open'),
            $('.header-nav__items--small').toggleClass('header-nav__items--open');
        });
-     $(".contact-form--item").click(function () {
-         $(this).closest('contact-form__label').toggleClass('ontact-form__label-indent');
-     });
+       
+    
 });
 
 function initMap() {

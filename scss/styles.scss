@@ -635,7 +635,7 @@ header {
 	}
 
 	&__img {
-		width: 100%;
+		// width: 100%;
 		height: auto;
 	}
 
@@ -776,7 +776,7 @@ header {
 .contact {
 	text-align: center;
 	background-color: #9f9acf;
-	overflow: hidden;
+    overflow: hidden;
 	position: relative;
 
 	&-map {
@@ -805,9 +805,16 @@ header {
 
 		width: 860px;
 		max-width: 90%;
+		height: auto;
 		position: absolute;
 		@include myPos();
 		bottom: 45%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		
+		
 
 		&__input-group {
 			display: flex;
@@ -824,14 +831,13 @@ header {
 			background-color: rgba(235, 235, 235, .5);
 			text-overflow: ellipsis;
 			@include tr(background-color);
+			
 
 			&:hover,
 			&:focus {
 				background-color: rgba(235, 235, 235, .75);
 
-				& label {
-					transform: translate(-100%, -100%);
-				}
+			
 			}
 
 		}
@@ -841,10 +847,13 @@ header {
 			font-style: italic;
 			position: absolute;
 			transform: translate(30%, 50%);
-			@include tr(all);
+			@include tr(all, 1s);
 
 			&:nth-of-type(2) {
 				left: 55%;
+			}
+			&:nth-of-type(3) {
+				transform: translate(20%,300%);
 			}
 
 			& sup {
@@ -852,13 +861,10 @@ header {
 				font-style: normal;
 			}
 
-
-
-
 		}
 		&__label-indent{
-			// text-indent: 100px;
-			transform: translate(50%,50%);
+			// // text-indent: 100px;
+			// transform: translate(50%,50%);
 		} 
 
 		&__name {
@@ -873,7 +879,16 @@ header {
 		&__textarea {
 			width: 100%;
 			height: auto;
-			margin-bottom: 55px;
+			margin: 15px 0 55px;
+		}
+
+		&__name,
+		&__email,
+		&__textarea{
+			&:active + .contact-form__label,
+			&:focus  + .contact-form__label {
+				transform: translateX(3000px);
+			}
 		}
 
 		&__btn {
@@ -1191,10 +1206,16 @@ header {
 		width: 100%;
 	}
 
-	.contact-form__label:nth-of-type(2) {
+	.contact-form__label{
+		&:nth-of-type(2) {
 		left: 0%;
 		bottom: -20%
 	}
+		&:nth-of-type(3) {
+		left: 0%;
+		bottom: -20%
+	}
+ }
 
 	.contact-form__textarea {
 		margin-bottom: 10px;
